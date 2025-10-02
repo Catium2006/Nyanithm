@@ -15,10 +15,10 @@
 
 
 # 固件 Firmware
-[](firmware/Nyanithm/readme.md)
+[Link](firmware/Nyanithm/readme.md)
 
 # 上位机软件 ConfigApp
-[](ConfigApp/readme.md)
+[Link](ConfigApp/readme.md)
 
 # CAD文件
 亚克力板图形
