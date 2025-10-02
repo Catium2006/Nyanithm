@@ -53,8 +53,12 @@ all: $(TARGET)
 run: clean all
 	$(TARGET)
 
+# 创建输出文件
+mkdirs:
+	if not exist "bin" mkdir -p "bin"
+
 # 把object文件链接成可执行
-$(TARGET): $(OBJS)
+$(TARGET): $(OBJS) mkdirs
 	$(CXX) $(OBJS) $(CXXFLAGS) -o $(TARGET)
 
 # 编译源码
