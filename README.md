@@ -10,7 +10,9 @@
 
 # 硬件 Hardware
 发布在嘉立创 OSHWHUB
+
 27寸手台分体版本符合嘉立创打样规则
+
 
 # 固件 Firmware
 [](firmware/Nyanithm/readme.md)
