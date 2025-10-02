@@ -1,2 +1,22 @@
 # Nyanithm
-一款四字游戏的控制器
+出你字母风格游戏控制器
+
+27寸手台成本仅需90元
+
+# 简介
++ `32` 通道触摸, 可更换 `MPR121` 模块
++ `4` 组高度传感器用于 `Air` 键
++ `Raspberry Pico` 双核主控
+
+# 硬件 Hardware
+发布在嘉立创 OSHWHUB
+27寸手台分体版本符合嘉立创打样规则
+
+# 固件 Firmware
+[](firmware/Nyanithm/readme.md)
+
+# 上位机软件 ConfigApp
+[](ConfigApp/readme.md)
+
+# CAD文件
+亚克力板图形
