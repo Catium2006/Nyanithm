@@ -226,11 +226,10 @@ void calcCycle() {
 }
 
 void getStatus() {
-    printf("avr %lu us in a cycle\n", time_take);
-    printf("ir measure time: %llu\n", ir1.getAsyncMeasureTime());
-    printf("air: %d %d %d %d\n", heightData[0], heightData[1], heightData[2], heightData[3]);
-
-    printf("read config in page %d\n", getConfigPage());
+    printf("Nyanithm build " __DATE__ " " __TIME__ "\n");
+    printf("average %lu us used in reporting HID\n", time_take);
+    printf("tof measure time: %llu\n", ir1.getAsyncMeasureTime());
+    printf("using config in page %d\n", getConfigPage());
 }
 
 bool hid_work = true;
