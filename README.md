@@ -24,3 +24,10 @@
 
 # CAD文件
 亚克力板图形
+
+# 键位映射
+```
+A B C D I J K L Q R S T Y Z 1 2
+E F G H M N O P U V W X 3 4 5 6
+
+```
