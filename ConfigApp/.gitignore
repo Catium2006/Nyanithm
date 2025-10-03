@@ -1,6 +1,5 @@
 .clang-format
 .vscode/*
-include/rapidjson
 src/*.o
 bin/*
 config.bin

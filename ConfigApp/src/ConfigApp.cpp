@@ -11,7 +11,6 @@
 #include <iostream>
 #include <vector>
 
-#include <rapidjson/document.h>
 
 using namespace std;
 
