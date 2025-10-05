@@ -24,7 +24,7 @@
 
 ## CAD文件
 亚克力板图形
-![CAD预览](https://image.lceda.cn/oshwhub/pullImage/c97ae41dbb944c009113c8a0750bae9d.png)
+![CAD预览](pics/c97ae41dbb944c009113c8a0750bae9d.png)
 ## 键位映射
 Slider
 ```
