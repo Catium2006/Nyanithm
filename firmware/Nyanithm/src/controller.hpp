@@ -229,6 +229,7 @@ void getStatus() {
     printf("Nyanithm build " __DATE__ " " __TIME__ "\n");
     printf("average %lu us used in reporting HID\n", time_take);
     printf("tof measure time: %llu %llu %llu %llu\n", ir0.getAsyncMeasureTime(), ir1.getAsyncMeasureTime(), ir2.getAsyncMeasureTime(), ir3.getAsyncMeasureTime());
+    printf("tof distance: %u %u %u %u\n", heightData[0], heightData[1], heightData[2], heightData[3]);
     printf("using config in page %d\n", getConfigPage());
 }
 
