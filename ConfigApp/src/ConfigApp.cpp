@@ -11,8 +11,9 @@
 #include <iostream>
 #include <vector>
 
-
 using namespace std;
+
+bool opened;
 
 #include "controller_cmd.h"
 #include "controller_config_struct.h"
@@ -87,6 +88,11 @@ void showCmd(vector<option> options) {
     while (true) {
         clear();
         cout << "Canithm Controller Config App" << endl << endl;
+        if (opened) {
+            cout << "设备已连接" << endl;
+        }else{
+            cout << "设备未连接" << endl;
+        }
         cout << "按下按键并回车选择命令:" << endl;
         for (option opt : options) {
             cout << "  (" << opt.ch << ") " << opt.function << endl;
@@ -113,7 +119,6 @@ void showCmd(vector<option> options) {
 }
 
 #include <serialib.h>
-bool opened;
 
 serialib Serial;
 
@@ -186,8 +191,8 @@ void readStatus() {
     Sleep(200);
     Serial.readBytes(buf, 1024, 10);
     cout << buf << endl;
-    // system("pause");
-    Sleep(1000);
+    system("pause");
+    // Sleep(1000);
 }
 
 void saveConfig() {
@@ -414,11 +419,11 @@ vector<option> baseOptions = {
     { '1', "连接设备", setPort },                 //
     { '2', "调整配置", changeConfig },            //
     { '3', "高级选项", deviceAdvancedFunction },  //
-
 };
 
 int main() {
     calcSum(&defaultConfig);
+    findDevice();
     showCmd(baseOptions);
     Serial.closeDevice();
     return 0;
