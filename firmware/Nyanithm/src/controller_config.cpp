@@ -15,8 +15,8 @@ controller_config defalutConfig{
     .cfg1 = 0x00,                                                        //
     .cfg2 = 0x00,                                                        //
     .cfg3 = 0x00,                                                        //
-    .airMax = 490,                                                       //
-    .airMin = 250,                                                       //
+    .airMax = 400,                                                       //
+    .airMin = 200,                                                       //
     .mpr = { defaultThresholds, defaultThresholds, defaultThresholds },  //
     .mprFilter{ 0xffff, 0xffff, 0xffff },                                //
     .heightOffset = { 0, 0, 0, 0 },                                      //

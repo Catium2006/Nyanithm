@@ -28,8 +28,8 @@ controller_config defaultConfig{
     0x00,                                                         //
     0x00,                                                         //
     0x00,                                                         //
-    490,                                                          //
-    250,                                                          //
+    400,                                                          //
+    200,                                                          //
     { defaultThresholds, defaultThresholds, defaultThresholds },  //
     { 0xffff, 0xffff, 0xffff },                                   //
     { 0, 0, 0, 0 },                                               //

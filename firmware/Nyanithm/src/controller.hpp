@@ -170,6 +170,8 @@ void updateTouch() {
 uint16_t heightData[4];
 bool airKeys[6];
 
+uint8_t heightRange = 5;
+
 void updateAir() {
     bool updated = false;
     pca9545a.setChannel(0);
@@ -200,7 +202,7 @@ void updateAir() {
     for (int j = 0; j < 6; j++) {
         bool detected = false;
         for (int i = 0; i < 4; i++) {
-            if (ControllerConfig.airMin + dH * j <= heightData[i] && ControllerConfig.airMin + dH * (j + 1) >= heightData[i]) {
+            if (ControllerConfig.airMin + dH * j - heightRange <= heightData[i] && ControllerConfig.airMin + dH * (j + 1) + heightRange >= heightData[i]) {
                 detected = true;
                 break;
             }
