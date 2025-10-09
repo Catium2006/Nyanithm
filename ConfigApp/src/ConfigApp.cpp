@@ -90,7 +90,7 @@ void showCmd(vector<option> options) {
         cout << "Canithm Controller Config App" << endl << endl;
         if (opened) {
             cout << "设备已连接" << endl;
-        }else{
+        } else {
             cout << "设备未连接" << endl;
         }
         cout << "按下按键并回车选择命令:" << endl;
@@ -336,6 +336,29 @@ void modifyTouch() {
     Sleep(1000);
 }
 
+void modifyTouchAll() {
+    clear();
+    cout << "正在进行全局触摸灵敏度调整" << endl;
+    int buf;
+    cout << "输入触发阈值, 当前值 = " << (int)ControllerConfig.mpr[0].touch[0] << " (0 - 255)" << endl;
+    cin >> buf;
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 12; j++) {
+            ControllerConfig.mpr[i].touch[j] = buf;
+        }
+    }
+    cout << "输入释放阈值, 当前值 = " << (int)ControllerConfig.mpr[0].release[0] << " (0 - 255)" << endl;
+    cin >> buf;
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 12; j++) {
+            ControllerConfig.mpr[i].release[j] = buf;
+        }
+    }
+    cout << "设置成功" << endl;
+    calcSum(&ControllerConfig);
+    Sleep(1000);
+}
+
 void modifyAir() {
     clear();
     cout << "正在进行 Air 判定调整" << endl;
@@ -373,9 +396,10 @@ void modifyAirOffest() {
 }
 
 vector<option> modifyConfigOptions = {
-    { '1', "调整触摸灵敏度", modifyTouch },       //                         //
-    { '2', "调整 Air 判定范围", modifyAir },      //                         //
-    { '3', "校准 Air 偏移量", modifyAirOffest },  //                         //
+    { '1', "调整触摸灵敏度", modifyTouch },         //
+    { '2', "调整全局触摸灵敏度", modifyTouchAll },  //
+    { '3', "调整 Air 判定范围", modifyAir },        //
+    { '4', "校准 Air 偏移量", modifyAirOffest },    //
 };
 
 void modifyConfig() {
